@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090a12">
+  <meta name="description" content="Xatanical Creative — upload and share your files.">
+  <title>Xatanical Creative — File Sharing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">X</span><span>XATANICAL<span class="brand-muted">CREATIVE</span></span></a>
+    <nav><a href="#upload">Upload</a><a href="#how">How it works</a></nav>
+    <a class="top-cta" href="#upload">Share a file <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> SIMPLE FILE SHARING</div>
+      <h1>Your files.<br><span>One clean link.</span></h1>
+      <p class="hero-copy">Upload your file, get a shareable link, and send it anywhere. No complicated steps.</p>
+      <div class="hero-actions"><a class="button primary" href="#upload">Start uploading <span>↗</span></a><a class="text-link" href="#how">See how it works <span>↓</span></a></div>
+      <div class="hero-note"><span class="note-icon">✳</span> A simple home for the files you want to share.</div>
+    </section>
+
+    <section class="upload-section" id="upload">
+      <div class="section-heading"><div><div class="eyebrow">UPLOAD CENTER</div><h2>Share something new.</h2></div><span class="secure-tag">◈ PRIVATE BY DEFAULT</span></div>
+      <form id="uploadForm" class="upload-card">
+        <label class="dropzone" id="dropzone" for="fileInput">
+          <input id="fileInput" type="file" hidden>
+          <span class="upload-symbol">↑</span>
+          <strong id="dropTitle">Drop your file here</strong>
+          <span id="dropSubtitle">or <u>browse files</u> from your device</span>
+          <small>Maximum 50 MB per file</small>
+        </label>
+        <div class="file-meta">
+          <label>FILE TITLE <input id="fileTitle" maxlength="90" placeholder="Give your file a name (optional)"></label>
+          <label>DESCRIPTION <input id="fileDescription" maxlength="240" placeholder="Add a short description (optional)"></label>
+        </div>
+        <div class="upload-bottom"><span id="fileStatus">No file selected</span><button class="button primary" id="uploadButton" type="submit" disabled>Generate link <span>↗</span></button></div>
+        <div class="progress-wrap" id="progressWrap" hidden><div class="progress-track"><div id="progressBar"></div></div><small id="progressText">Preparing upload…</small></div>
+      </form>
+      <div id="result" class="result-card" hidden>
+        <div class="result-icon">✓</div><div class="result-copy"><strong>Your share link is ready</strong><span id="resultUrl"></span></div>
+        <button id="copyButton" class="button secondary" type="button">Copy link</button>
+      </div>
+      <p class="error" id="errorMessage" role="status"></p>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="eyebrow">HOW IT WORKS</div><h2>Three steps. That's it.</h2>
+      <div class="steps">
+        <article><span>01</span><div class="step-icon">↥</div><h3>Choose a file</h3><p>Select the file you want to share from your device.</p></article>
+        <article><span>02</span><div class="step-icon">⌁</div><h3>Get your link</h3><p>We'll create a unique page for your uploaded file.</p></article>
+        <article><span>03</span><div class="step-icon">↗</div><h3>Share anywhere</h3><p>Copy the link and send it to the people who need it.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-mark">X</span><span>XATANICAL<span class="brand-muted">CREATIVE</span></span></a><span>Made for sharing. © <span id="year"></span></span></footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

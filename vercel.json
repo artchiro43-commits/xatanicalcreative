@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/v/:id", "destination": "/v/[id].html" }
+  ],
+  "functions": {
+    "api/**/*.js": { "maxDuration": 30 }
+  }
+}
